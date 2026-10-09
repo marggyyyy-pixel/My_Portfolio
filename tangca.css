@@ -259,6 +259,62 @@ main {
         font-size: 20px;
     }
 
+/* FIX FOR MOBILE PHONES */
+@media screen and (max-width: 768px) {
+
+    main {
+        display: grid;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 15px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    section,
+    article,
+    aside {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        min-width: 0;
+        margin: 0 0 15px;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
     p,
     li {
         font-size: 15px;
